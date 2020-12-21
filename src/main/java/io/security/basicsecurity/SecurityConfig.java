@@ -28,6 +28,35 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http
+                .authorizeRequests()
+                .anyRequest().authenticated();
+        http
+                .formLogin();
+        http
+                .sessionManagement()
+                .maximumSessions(1)
+                .maxSessionsPreventsLogin(true); // false 디폴트
+        http
+                .sessionManagement()
+                .sessionFixation().changeSessionId();
+
+    }
+
+    /*@Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .authorizeRequests()
+                .anyRequest().authenticated();
+        http
+                .formLogin();
+        http
+                .rememberMe()
+                .userDetailsService(userDetailsService);
+    }*/
+
+    /*@Override
+    protected void configure(HttpSecurity http) throws Exception {
         //인가 정책
         http
                 .authorizeRequests()
@@ -69,5 +98,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .rememberMeParameter("remember")
                 .tokenValiditySeconds(36000)
                 .userDetailsService(userDetailsService);
-    }
+    }*/
+
+
 }

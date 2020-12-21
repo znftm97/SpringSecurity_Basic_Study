@@ -13,6 +13,7 @@ public class SecurityController {
 
     @GetMapping("/loginPage")
     public String loginPage(){
+
         return "loginPage";
     }
 }
