@@ -1,3 +1,4 @@
+/*
 package io.security.basicsecurity;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +44,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
-    /*@Override
+    */
+/*@Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
@@ -53,9 +55,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .rememberMe()
                 .userDetailsService(userDetailsService);
-    }*/
+    }*//*
 
-    /*@Override
+
+    */
+/*@Override
     protected void configure(HttpSecurity http) throws Exception {
         //인가 정책
         http
@@ -98,7 +102,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .rememberMeParameter("remember")
                 .tokenValiditySeconds(36000)
                 .userDetailsService(userDetailsService);
-    }*/
+    }*//*
+
 
 
 }
+*/
